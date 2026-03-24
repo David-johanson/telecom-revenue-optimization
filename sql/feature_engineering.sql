@@ -1,4 +1,22 @@
 /*==============================================================
+  PERFORMANCE CONSIDERATIONS
+
+  - Uses pre-aggregated daily usage tables to avoid full scans
+  - MATERIALIZE hint ensures reuse of heavy CTEs
+  - USE_HASH join strategy for large datasets
+  - Date filters applied early for partition pruning
+
+  RECOMMENDED INDEXES:
+
+  CREATE INDEX idx_usage_day_subs
+    ON dwh_coe_data.tran_agr_daily_usage(day, subs_id);
+
+  CREATE INDEX idx_kpi_subs_date
+    ON rep_report.td_cm_kpi_report_ext(subs_id, notif_date);
+
+==============================================================*/
+
+/*==============================================================
   FILE: feature_engineering.sql
   PURPOSE:
     Build churn and revenue optimization feature layer
