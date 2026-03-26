@@ -33,7 +33,14 @@ This project can be viewed as a decision system composed of:
 The goal is not only prediction, but **optimal decision-making under business constraints**.
 
 ---
+## 🎯 Analytical Scope
 
+This project covers two core telecom analytics domains:
+
+- **Revenue Growth (Upsell)** — via mix package scale-up targeting (UC05)
+- **Revenue Protection (Churn)** — via churn prediction and retention optimization
+
+---  
 ## 🎯 Solution Overview
 
 | Layer | Description |
@@ -105,18 +112,32 @@ Targets only **high-impact customers**:
 
 This project includes production-style Oracle SQL pipelines used in telecom environments.
 
-### 🔥 UC05 Scale-up Pipeline
-- Dynamic subscriber targeting
-- Behavioral + revenue filtering
-- ML-driven segmentation
-- Offer assignment
-- 30-day retention lifecycle
+### 🔥 UC05 Scale-up Pipeline (Upsell / Behavioral Targeting)
 
-### Other SQL Modules
-- `feature_engineering.sql` — model features  
-- `revenue_at_risk.sql` — revenue exposure  
+A production-grade pipeline designed for **mix package scale-up (upsell)** use case.
 
-📂 Full SQL docs: [sql/README.md](sql/README.md)
+#### Objective:
+Identify subscribers with high likelihood to **upgrade to higher-value mix packages** based on behavioral patterns.
+
+#### Key Logic:
+- Filters eligible subscribers using 90-day usage behavior  
+- Applies revenue constraints (mix charge range)  
+- Identifies users with strong **mix affinity (data + voice usage)**  
+- Integrates ML model predictions (mix propensity)  
+- Assigns personalized offer bundles (`Offer1–Offer4`)  
+- Maintains a **30-day active targeting window**
+
+#### Business Goal:
+Increase ARPU by converting medium-value users into higher-value **mix package subscribers**
+
+---
+
+### Other SQL Modules (Churn-Oriented)
+
+- `feature_engineering.sql` — builds churn model features  
+- `revenue_at_risk.sql` — calculates churn-related revenue exposure  
+
+📂 Full SQL documentation: [sql/README.md](sql/README.md)
 
 ---
 
