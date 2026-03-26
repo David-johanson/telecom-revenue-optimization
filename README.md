@@ -42,49 +42,7 @@ This project covers two core telecom analytics domains:
 ---  
 
 ## 🔄 End-to-End Analytics Flow
-            ┌──────────────────────────────┐
-            │        Raw Data Layer        │
-            │------------------------------│
-            │ Usage | Revenue | Subs Info  │
-            └──────────────┬───────────────┘
-                           │
-                           ▼
-            ┌──────────────────────────────┐
-            │     Feature Engineering      │
-            │------------------------------│
-            │ Tenure | Usage | ARPU | Recency │
-            └──────────────┬───────────────┘
-                           │
-            ┌──────────────┴──────────────┐
-            ▼                             ▼
-┌──────────────────────┐ ┌──────────────────────┐
-│ CHURN ANALYTICS │ │ UC05 UPSCALE │
-│----------------------│ │----------------------│
-│ Churn Probability │ │ Mix Behavior │
-│ Risk Segmentation │ │ Usage Affinity │
-│ Actual vs Predicted │ │ Model Targeting │
-└──────────┬───────────┘ └──────────┬───────────┘
-│ │
-▼ ▼
-┌──────────────────────┐ ┌──────────────────────┐
-│ REVENUE AT RISK │ │ TARGET BASE │
-│----------------------│ │----------------------│
-│ 90D Revenue Loss │ │ Eligible Users │
-│ High-Value Users │ │ Offer Assignment │
-└──────────┬───────────┘ └──────────┬───────────┘
-└──────────────┬────────────────────────┘
-▼
-┌──────────────────────────────┐
-│ DECISION LAYER │
-│ Who to target & how │
-│ ROI-driven prioritization │
-└──────────────┬───────────────┘
-▼
-┌──────────────────────────────┐
-│ BUSINESS IMPACT │
-│ ↑ ARPU | ↓ Revenue Loss │
-└──────────────────────────────┘
-
+           
             
 ## 🎯 Solution Overview
 
