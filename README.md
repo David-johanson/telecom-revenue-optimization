@@ -57,35 +57,32 @@ This project covers two core telecom analytics domains:
                            │
             ┌──────────────┴──────────────┐
             ▼                             ▼
- ┌──────────────────────────┐ ┌──────────────────────────┐
-│ CHURN ANALYTICS │ │ UC05 SCALE-UP (UPSELL) │
-│--------------------------│ │--------------------------│
-│ Churn Probability │ │ Mix Behavior Detection │
-│ Risk Segmentation │ │ Usage Affinity (Data+Voice) │
-│ Actual vs Predicted │ │ Model Targeting (Mix) │
-└──────────────┬───────────┘ └──────────────┬───────────┘
+┌──────────────────────┐ ┌──────────────────────┐
+│ CHURN ANALYTICS │ │ UC05 UPSCALE │
+│----------------------│ │----------------------│
+│ Churn Probability │ │ Mix Behavior │
+│ Risk Segmentation │ │ Usage Affinity │
+│ Actual vs Predicted │ │ Model Targeting │
+└──────────┬───────────┘ └──────────┬───────────┘
 │ │
 ▼ ▼
-┌──────────────────────────┐ ┌──────────────────────────┐
-│ REVENUE AT RISK │ │ TARGET BASE GENERATION │
-│--------------------------│ │--------------------------│
-│ 90D Revenue Loss │ │ Eligible Subscribers │
-│ High-Value Churners │ │ Offer Assignment │
-└──────────────┬───────────┘ └──────────────┬───────────┘
-└──────────────┬────────────────────────────┘
+┌──────────────────────┐ ┌──────────────────────┐
+│ REVENUE AT RISK │ │ TARGET BASE │
+│----------------------│ │----------------------│
+│ 90D Revenue Loss │ │ Eligible Users │
+│ High-Value Users │ │ Offer Assignment │
+└──────────┬───────────┘ └──────────┬───────────┘
+└──────────────┬────────────────────────┘
 ▼
 ┌──────────────────────────────┐
 │ DECISION LAYER │
-│------------------------------│
 │ Who to target & how │
 │ ROI-driven prioritization │
 └──────────────┬───────────────┘
 ▼
 ┌──────────────────────────────┐
 │ BUSINESS IMPACT │
-│------------------------------│
-│ ↑ ARPU (Upsell) │
-│ ↓ Revenue Loss (Churn) │
+│ ↑ ARPU | ↓ Revenue Loss │
 └──────────────────────────────┘
 
             
